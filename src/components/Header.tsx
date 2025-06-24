@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * Headerコンポーネント
@@ -7,22 +8,30 @@ import Link from "next/link";
 function Header() {
   return (
     <header className="bg-gray-100 text-gray-900 shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto  flex justify-between items-center">
         {/* サイトタイトル */}
         <h1 className="text-xl font-bold">
-          <Link href="/">Portfolio</Link>
+          <Link href="/">
+            <Image
+              src="/portfolio-logo.png"
+              alt="Portfolio"
+              width={120}
+              height={40}
+              className="h-auto w-auto"
+            />
+          </Link>
         </h1>
 
         {/* ナビゲーションリンク */}
         <nav className="space-x-4">
           <Link href="/" className="hover:underline">
-            トップ
+            TOP
           </Link>
-          <Link href="/about" className="hover:underline">
-            自己紹介
+          <Link href="/profile" className="hover:underline">
+            PROFILE
           </Link>
-          <Link href="/works" className="hover:underline">
-            実績
+          <Link href="/projects" className="hover:underline">
+            PROJECT
           </Link>
         </nav>
       </div>

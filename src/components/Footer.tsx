@@ -4,7 +4,7 @@
  */
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-500 text-sm text-center py-4 mt-10">
+    <footer className="bg-gray-100 text-gray-500 text-sm text-center py-4 ">
       <p>© 2025 Yamaguchi Kana. All rights reserved.</p>
     </footer>
   );

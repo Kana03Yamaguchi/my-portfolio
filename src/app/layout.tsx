@@ -13,7 +13,7 @@ export const metadata = {
 /**
  * 共通レイアウト
  */
-export default function RootLayout({
+function RootLayout({
   children, // ページごとの中身
 }: {
   children: React.ReactNode;
@@ -25,7 +25,12 @@ export default function RootLayout({
         <Header />
 
         {/* ページごとの中身を表示するエリア */}
-        <main className="flex-1 container mx-auto p-4">{children}</main>
+        <main
+          className="flex-1 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/bg-projects.png')" }}
+        >
+          {children}
+        </main>
 
         {/* フッター（コピーライトなど）を表示 */}
         <Footer />
@@ -33,3 +38,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
