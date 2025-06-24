@@ -1,4 +1,3 @@
-// microCMSとやりとりするための関数を読み込み
 import { createClient } from "microcms-js-sdk";
 
 /**

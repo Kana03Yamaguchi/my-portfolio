@@ -1,4 +1,3 @@
-// microCMSのクライアントを読み込み
 import ProjectSlider from "@/components/ProjectSlider";
 import { client } from "@/libs/client";
 import Image from "next/image";

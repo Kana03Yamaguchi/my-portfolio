@@ -13,11 +13,10 @@ async function ProfilePage() {
     // プロフィールデータを取得
     const data = await client.get({
       endpoint: "profile",
-      customRequestInit: {
-        cache: "no-cache",
-      },
+      // customRequestInit: {
+      //   cache: "no-cache", // キャッシュを無効化
+      // },
     });
-    console.log(data); // ここで確認！
     // 取得したデータからcontentを抽出
     content = data.content;
   } catch (error) {
