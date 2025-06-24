@@ -12,11 +12,12 @@ async function ProfilePage() {
   try {
     // プロフィールデータを取得
     const data = await client.get({
-      // customRequestInit: {
-      //   cache: "no-store", // キャッシュを無効化して最新データを取得
-      // },
       endpoint: "profile",
+      customRequestInit: {
+        cache: "no-cache",
+      },
     });
+    console.log(data); // ここで確認！
     // 取得したデータからcontentを抽出
     content = data.content;
   } catch (error) {
